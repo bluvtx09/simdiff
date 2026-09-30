@@ -1,0 +1,49 @@
+== mujoco (실패율 0.296, 깊이3 교차검증 정확도 0.931) ==
+
+|--- log10_steps <= 1.98
+|   |--- log10_tc_over_dt <= 0.90
+|   |   |--- log10_steps <= 1.90
+|   |   |   |--- weights: [355.00, 6830.00] class: 1
+|   |   |--- log10_steps >  1.90
+|   |   |   |--- weights: [263.00, 1078.00] class: 1
+|   |--- log10_tc_over_dt >  0.90
+|   |   |--- log10_steps <= 1.81
+|   |   |   |--- weights: [280.00, 333.00] class: 1
+|   |   |--- log10_steps >  1.81
+|   |   |   |--- weights: [583.00, 174.00] class: 0
+|--- log10_steps >  1.98
+|   |--- tau <= 0.70
+|   |   |--- log10_tc_over_tstop <= -0.69
+|   |   |   |--- weights: [19832.00, 356.00] class: 0
+|   |   |--- log10_tc_over_tstop >  -0.69
+|   |   |   |--- weights: [175.00, 127.00] class: 0
+|   |--- tau >  0.70
+|   |   |--- log10_tc_over_dt <= 0.91
+|   |   |   |--- weights: [226.00, 433.00] class: 1
+|   |   |--- log10_tc_over_dt >  0.91
+|   |   |   |--- weights: [1345.00, 378.00] class: 0
+
+== pybullet (실패율 0.142, 깊이3 교차검증 정확도 0.889) ==
+
+|--- log10_steps <= 1.87
+|   |--- tau <= 0.71
+|   |   |--- log10_steps <= 1.63
+|   |   |   |--- weights: [953.00, 1169.00] class: 1
+|   |   |--- log10_steps >  1.63
+|   |   |   |--- weights: [2120.00, 925.00] class: 0
+|   |--- tau >  0.71
+|   |   |--- contact_erp <= 0.54
+|   |   |   |--- weights: [207.00, 807.00] class: 1
+|   |   |--- contact_erp >  0.54
+|   |   |   |--- weights: [228.00, 317.00] class: 1
+|--- log10_steps >  1.87
+|   |--- log10_dt_ms <= 0.78
+|   |   |--- log10_steps <= 1.97
+|   |   |   |--- weights: [1016.00, 228.00] class: 0
+|   |   |--- log10_steps >  1.97
+|   |   |   |--- weights: [18936.00, 273.00] class: 0
+|   |--- log10_dt_ms >  0.78
+|   |   |--- contact_erp <= 0.61
+|   |   |   |--- weights: [977.00, 120.00] class: 0
+|   |   |--- contact_erp >  0.61
+|   |   |   |--- weights: [157.00, 239.00] class: 1

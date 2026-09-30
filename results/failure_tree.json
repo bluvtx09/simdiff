@@ -1,0 +1,34 @@
+{
+  "mujoco": {
+    "cv_accuracy_by_depth": {
+      "2": 0.923858646809394,
+      "3": 0.9306030064662302,
+      "4": 0.932403592015919
+    },
+    "baseline_accuracy": 0.703704833984375,
+    "feature_importance_depth3": {
+      "log10_steps": 0.86,
+      "log10_tc_over_dt": 0.089,
+      "tau": 0.042,
+      "log10_tc_over_tstop": 0.009,
+      "log10_dt_ms": 0.0,
+      "impratio": 0.0,
+      "elliptic": 0.0
+    }
+  },
+  "pybullet": {
+    "cv_accuracy_by_depth": {
+      "2": 0.8800922805857716,
+      "3": 0.8887767090199665,
+      "4": 0.8917064184361685
+    },
+    "baseline_accuracy": 0.8577706473214286,
+    "feature_importance_depth3": {
+      "log10_steps": 0.802,
+      "tau": 0.087,
+      "contact_erp": 0.064,
+      "log10_dt_ms": 0.047,
+      "iterations": 0.0
+    }
+  }
+}

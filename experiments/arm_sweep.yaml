@@ -1,0 +1,21 @@
+# SimDiff 2단계-A: 2링크 팔(혼돈) 예측 가능 시간
+scene: two_link_arm
+duration: 20.0
+threshold_rad: 0.1          # 관절각 오차가 이 값을 넘는 첫 시각 = 예측 가능 시간
+butterfly_perturb_rad: 1.0e-9
+# 초기 자세 (q1 어깨, q2 팔꿈치, 도). low는 비혼돈 대조군, 나머지는 혼돈 영역
+initial_conditions:
+  - {name: low,  q_deg: [10, 5]}
+  - {name: mid,  q_deg: [60, 30]}
+  - {name: high, q_deg: [120, -30]}
+random_chaotic:
+  n: 12
+  seed: 0
+  q1_deg: [90, 150]
+  q2_deg: [-60, 60]
+timesteps: [0.00025, 0.0005, 0.001, 0.002, 0.005]
+configs:
+  - {engine: mujoco,   label: "MuJoCo Euler",        integrator: Euler}
+  - {engine: mujoco,   label: "MuJoCo implicitfast", integrator: implicitfast}
+  - {engine: mujoco,   label: "MuJoCo RK4",          integrator: RK4}
+  - {engine: pybullet, label: "PyBullet clean",      mode: clean}

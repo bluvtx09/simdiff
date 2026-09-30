@@ -1,0 +1,75 @@
+{
+  "mujoco": {
+    "value_pct": 9.695558344946997,
+    "found_by": "cmaes",
+    "seed": 1,
+    "params": {
+      "log10_dt": -2.661702346124341,
+      "mu": 0.5999961436635011,
+      "v0": 0.500946677684287,
+      "mj_log10_timeconst": -1.3013086711266488,
+      "mj_impratio": 2.2885175707134318,
+      "mj_cone": 0.14214735055926095
+    },
+    "dt": 0.00028369571718385027,
+    "steps_to_stop": 300.0,
+    "d_true": 0.021317464049476632,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 7.491750226212657,
+      "share_over_1pct": 1.0
+    },
+    "share_over_1pct_cmaes": 0.11916666666666667,
+    "share_over_1pct_random": 0.01375
+  },
+  "pybullet": {
+    "value_pct": 5.959183310353433,
+    "found_by": "random",
+    "seed": 5,
+    "params": {
+      "log10_dt": -2.0238065121814506,
+      "mu": 0.10114298945948944,
+      "v0": 2.9066297469048368,
+      "pb_log10_iterations": 1.7861215039484475,
+      "pb_contact_erp": 0.7246736269706117
+    },
+    "dt": 0.009466588249193617,
+    "steps_to_stop": 309.45067393304987,
+    "d_true": 4.257401794554136,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 3.623817186346112,
+      "share_over_1pct": 1.0
+    },
+    "share_over_1pct_cmaes": 0.00020833333333333335,
+    "share_over_1pct_random": 0.007291666666666667
+  },
+  "disagree": {
+    "value_pct": 19.368469501183842,
+    "found_by": "cmaes",
+    "seed": 4,
+    "params": {
+      "log10_dt": -2.0331143933211075,
+      "mu": 0.10283724876284286,
+      "v0": 1.610093469368333,
+      "mj_log10_timeconst": -1.5553559570816218,
+      "mj_impratio": 3.6253254210637658,
+      "mj_cone": 0.2771909442425823,
+      "pb_log10_iterations": 1.0614677826143128,
+      "pb_contact_erp": 0.7981808362920929
+    },
+    "dt": 0.005319984623917266,
+    "steps_to_stop": 300.0,
+    "d_true": 1.2848508750163705,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 3.9641819005282803,
+      "share_over_1pct": 1.0
+    },
+    "share_over_1pct_cmaes": 0.8045833333333333,
+    "share_over_1pct_random": 0.03208333333333333
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "box": {
+    "MuJoCo 오차 ← 엔진 간 불일치": {
+      "spearman": 0.79,
+      "auc_fail_1pct": 0.943,
+      "fail_rate": 0.292
+    },
+    "MuJoCo 오차 ← 자기 불일치 (dt vs dt/2)": {
+      "spearman": 0.883,
+      "auc_fail_1pct": 0.95,
+      "fail_rate": 0.292
+    },
+    "MuJoCo 실제오차 / (2 x 자기불일치) 중앙값": 0.929,
+    "MuJoCo 2x자기불일치가 실제오차의 0.5~2배 안에 드는 비율": 0.823,
+    "PyBullet 오차 ← 엔진 간 불일치": {
+      "spearman": 0.566,
+      "auc_fail_1pct": 0.857,
+      "fail_rate": 0.129
+    },
+    "PyBullet 오차 ← 자기 불일치 (dt vs dt/2)": {
+      "spearman": 0.673,
+      "auc_fail_1pct": 0.921,
+      "fail_rate": 0.129
+    },
+    "PyBullet 실제오차 / (2 x 자기불일치) 중앙값": 1.067,
+    "PyBullet 2x자기불일치가 실제오차의 0.5~2배 안에 드는 비율": 0.693
+  },
+  "arm": {
+    "MuJoCo 오차 ← 엔진 간 불일치": {
+      "spearman": 0.782,
+      "auc_fail_0.1rad": 0.928,
+      "fail_rate": 0.311
+    },
+    "MuJoCo 오차 ← 자기 불일치 (dt vs dt/2)": {
+      "spearman": 0.999,
+      "auc_fail_0.1rad": 1.0,
+      "fail_rate": 0.311
+    },
+    "실제오차 / (2 x 자기불일치) 중앙값": 1.0,
+    "엔진 간 불일치 중앙값 (rad)": 1.970645868709653e-15,
+    "실제 오차 중앙값 (rad)": 0.029470610067740433
+  }
+}

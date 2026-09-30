@@ -1,0 +1,11 @@
+# SimDiff 결과를 만든 환경 (Python 3.11)
+mujoco==3.14.0
+pybullet==3.2.7
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.2
+matplotlib==3.10.9
+SALib==1.6.0
+cma==4.5.0
+scikit-learn==1.8.0
+pyyaml==6.0.3

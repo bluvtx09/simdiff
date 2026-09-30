@@ -1,0 +1,89 @@
+{
+  "runs": 288,
+  "all_deterministic": true,
+  "euler_first_order_slope": 0.9998658422839651,
+  "rk4_slope": 3.8113315015223836,
+  "at_dt_1ms_theta90_undamped": {
+    "MuJoCo Euler (기본값)": {
+      "rmse_rad": 0.0021172875055556,
+      "energy_err_final": 0.000834466380249
+    },
+    "MuJoCo RK4": {
+      "rmse_rad": 3.50089245053546e-11,
+      "energy_err_final": 1.1715625638042432e-13
+    },
+    "MuJoCo implicit": {
+      "rmse_rad": 0.0021172875055627,
+      "energy_err_final": 0.0008344663802436
+    },
+    "MuJoCo implicitfast": {
+      "rmse_rad": 0.0021172875055556,
+      "energy_err_final": 0.000834466380249
+    },
+    "PyBullet clean": {
+      "rmse_rad": 0.0021172875055663,
+      "energy_err_final": 0.0008344663802391
+    },
+    "PyBullet 관성만 수정": {
+      "rmse_rad": 1.085735885600688,
+      "energy_err_final": -0.6821602259811674
+    },
+    "PyBullet 감쇠만 수정": {
+      "rmse_rad": 0.0998327827876648,
+      "energy_err_final": 0.0006157099234114
+    },
+    "PyBullet 기본값": {
+      "rmse_rad": 1.1229466413047902,
+      "energy_err_final": -0.6803720935382283
+    }
+  },
+  "mujoco_euler_equals_implicit_all_conditions": true,
+  "undamped_max_disagreement_rad": 8.436471863183273e-13,
+  "undamped_min_error_rad": 0.0004055836620400214,
+  "undamped_max_error_rad": 0.042325609071706946,
+  "damped_pybullet_over_mujoco_error_ratio_mean": 2.105368372516903,
+  "spearman_disagreement_vs_error_all": {
+    "rho": 0.30321750321750324,
+    "p": 0.07222655362786747,
+    "n": 36
+  },
+  "spearman_disagreement_vs_error_damped_only": {
+    "rho": 0.9979360165118679,
+    "p": 1.645123171531247e-20,
+    "n": 18
+  },
+  "pybullet_effective_inertia": {
+    "default": {
+      "mass": 1.0,
+      "local_inertia_diag": [
+        6.666666666666666e-07,
+        6.666666666666666e-07,
+        6.666666666666666e-07
+      ]
+    },
+    "file_inertia_only": {
+      "mass": 1.0,
+      "local_inertia_diag": [
+        0.002,
+        0.002,
+        0.002
+      ]
+    },
+    "damping_only": {
+      "mass": 1.0,
+      "local_inertia_diag": [
+        6.666666666666666e-07,
+        6.666666666666666e-07,
+        6.666666666666666e-07
+      ]
+    },
+    "clean": {
+      "mass": 1.0,
+      "local_inertia_diag": [
+        0.002,
+        0.002,
+        0.002
+      ]
+    }
+  }
+}

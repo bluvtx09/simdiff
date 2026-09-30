@@ -1,0 +1,75 @@
+{
+  "mujoco": {
+    "value_pct": 25.789272227522897,
+    "found_by": "cmaes",
+    "seed": 7,
+    "params": {
+      "log10_dt": -2.0597867966685595,
+      "mu": 0.7944257974052396,
+      "v0": 1.8314448091924684,
+      "mj_log10_timeconst": -2.2844758054113536,
+      "mj_impratio": 4.573030366477939,
+      "mj_cone": 0.9917002134878785
+    },
+    "dt": 0.0007833398761803037,
+    "steps_to_stop": 300.0,
+    "d_true": 0.21519656250958322,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.9729804467938197,
+      "share_over_1pct": 0.475
+    },
+    "share_over_1pct_cmaes": 0.6341666666666667,
+    "share_over_1pct_random": 0.061875
+  },
+  "pybullet": {
+    "value_pct": 7.266739283274304,
+    "found_by": "random",
+    "seed": 4,
+    "params": {
+      "log10_dt": -2.2419290218417984,
+      "mu": 0.1316951503792008,
+      "v0": 1.0179450982658096,
+      "pb_log10_iterations": 0.7442029250031277,
+      "pb_contact_erp": 0.7704933571107263
+    },
+    "dt": 0.0026264208100802346,
+    "steps_to_stop": 300.0,
+    "d_true": 0.4010328284406738,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.5131739377253308,
+      "share_over_1pct": 0.35
+    },
+    "share_over_1pct_cmaes": 0.0004166666666666667,
+    "share_over_1pct_random": 0.005625
+  },
+  "disagree": {
+    "value_pct": 22.987513630766326,
+    "found_by": "cmaes",
+    "seed": 5,
+    "params": {
+      "log10_dt": -2.775544179353834,
+      "mu": 0.7901864072415911,
+      "v0": 1.8848017137923183,
+      "mj_log10_timeconst": -2.272423887242062,
+      "mj_impratio": 1.4754250765492471,
+      "mj_cone": 0.6687186085483657,
+      "pb_log10_iterations": 0.6692884853567935,
+      "pb_contact_erp": 0.22702237619765753
+    },
+    "dt": 0.000810486622906088,
+    "steps_to_stop": 300.0,
+    "d_true": 0.22914098637887145,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.7285097631537544,
+      "share_over_1pct": 0.425
+    },
+    "share_over_1pct_cmaes": 0.7752083333333334,
+    "share_over_1pct_random": 0.089375
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "arm": {
+    "n_chaotic_ics": 12,
+    "median_horizon_s": {
+      "MuJoCo Euler": {
+        "0.00025": 1.89,
+        "0.0005": 1.5,
+        "0.001": 1.29,
+        "0.002": 0.99,
+        "0.005": 0.77
+      },
+      "MuJoCo RK4": {
+        "0.00025": 9.01,
+        "0.0005": 9.01,
+        "0.001": 8.82,
+        "0.002": 7.5,
+        "0.005": 5.58
+      },
+      "MuJoCo implicitfast": {
+        "0.00025": 1.89,
+        "0.0005": 1.5,
+        "0.001": 1.29,
+        "0.002": 0.99,
+        "0.005": 0.77
+      },
+      "PyBullet clean": {
+        "0.00025": 1.89,
+        "0.0005": 1.5,
+        "0.001": 1.29,
+        "0.002": 0.99,
+        "0.005": 0.77
+      }
+    },
+    "median_engine_vs_engine_horizon_s": {
+      "0.00025": 17.0,
+      "0.0005": 17.01,
+      "0.001": 16.52,
+      "0.002": 16.05,
+      "0.005": "20초 내내 일치"
+    },
+    "median_butterfly_horizon_s": 9.49,
+    "euler_horizon_gain_per_10x_smaller_dt_s": 0.85,
+    "rk4_censored_fraction": 0.533,
+    "mujoco_euler_eq_pybullet_horizon_all": true,
+    "nonchaotic_ics": [
+      "low",
+      "mid",
+      "rand10"
+    ]
+  },
+  "box_traps": {
+    "MuJoCo 기본값": {
+      "mean": -0.34,
+      "min": -0.63,
+      "max": -0.02
+    },
+    "PyBullet 기본 감쇠 유지": {
+      "mean": -4.61,
+      "min": -11.52,
+      "max": -1.77
+    },
+    "PyBullet 마찰을 양쪽에 mu로 입력": {
+      "mean": 136.03,
+      "min": 65.68,
+      "max": 261.93
+    },
+    "PyBullet 올바른 설정": {
+      "mean": -0.4,
+      "min": -0.98,
+      "max": -0.12
+    }
+  },
+  "box_never_tipped": true,
+  "sobol_mujoco": {
+    "n_runs": 32768,
+    "mean_abs_err_pct": 1.114,
+    "max_abs_err_pct": 24.0,
+    "share_abs_err_over_1pct": 0.296,
+    "indices": [
+      {
+        "label": "마찰계수 μ",
+        "kind": "물리",
+        "S1": 0.153,
+        "ST": 0.764,
+        "ST_conf": 0.118
+      },
+      {
+        "label": "타임스텝",
+        "kind": "설정",
+        "S1": 0.097,
+        "ST": 0.647,
+        "ST_conf": 0.107
+      },
+      {
+        "label": "초기 속도",
+        "kind": "물리",
+        "S1": 0.004,
+        "ST": 0.638,
+        "ST_conf": 0.102
+      },
+      {
+        "label": "접촉 강성(timeconst)",
+        "kind": "설정",
+        "S1": -0.027,
+        "ST": 0.507,
+        "ST_conf": 0.11
+      },
+      {
+        "label": "impratio",
+        "kind": "설정",
+        "S1": -0.031,
+        "ST": 0.3,
+        "ST_conf": 0.084
+      },
+      {
+        "label": "마찰 원뿔 종류",
+        "kind": "설정",
+        "S1": -0.011,
+        "ST": 0.212,
+        "ST_conf": 0.077
+      },
+      {
+        "label": "적분기",
+        "kind": "설정",
+        "S1": -0.0,
+        "ST": 0.0,
+        "ST_conf": 0.0
+      }
+    ],
+    "sum_S1": 0.254,
+    "r2_log_steps_vs_log_err": 0.68,
+    "mean_abs_err_by_steps_to_stop": {
+      "(0.0, 20.0]": 5.536,
+      "(20.0, 50.0]": 2.695,
+      "(50.0, 100.0]": 1.717,
+      "(100.0, 300.0]": 0.844,
+      "(300.0, inf]": 0.255
+    },
+    "share_under_1pct_by_steps_to_stop": {
+      "(0.0, 20.0]": 0.021,
+      "(20.0, 50.0]": 0.067,
+      "(50.0, 100.0]": 0.255,
+      "(100.0, 300.0]": 0.918,
+      "(300.0, inf]": 0.98
+    }
+  },
+  "sobol_pybullet": {
+    "n_runs": 28672,
+    "mean_abs_err_pct": 0.661,
+    "max_abs_err_pct": 82.17,
+    "share_abs_err_over_1pct": 0.142,
+    "indices": [
+      {
+        "label": "contactERP",
+        "kind": "설정",
+        "S1": 0.109,
+        "ST": 0.813,
+        "ST_conf": 1.076
+      },
+      {
+        "label": "타임스텝",
+        "kind": "설정",
+        "S1": 0.286,
+        "ST": 0.633,
+        "ST_conf": 0.445
+      },
+      {
+        "label": "초기 속도",
+        "kind": "물리",
+        "S1": 0.099,
+        "ST": 0.433,
+        "ST_conf": 0.403
+      },
+      {
+        "label": "마찰계수 μ",
+        "kind": "물리",
+        "S1": -0.0,
+        "ST": 0.335,
+        "ST_conf": 0.268
+      },
+      {
+        "label": "솔버 반복 횟수",
+        "kind": "설정",
+        "S1": -0.003,
+        "ST": 0.207,
+        "ST_conf": 0.195
+      },
+      {
+        "label": "frictionERP",
+        "kind": "설정",
+        "S1": 0.0,
+        "ST": 0.0,
+        "ST_conf": 0.0
+      }
+    ],
+    "sum_S1": 0.495,
+    "r2_log_steps_vs_log_err": 0.484,
+    "mean_abs_err_by_steps_to_stop": {
+      "(0.0, 20.0]": 3.067,
+      "(20.0, 50.0]": 1.725,
+      "(50.0, 100.0]": 0.958,
+      "(100.0, 300.0]": 0.506,
+      "(300.0, inf]": 0.166
+    },
+    "share_under_1pct_by_steps_to_stop": {
+      "(0.0, 20.0]": 0.21,
+      "(20.0, 50.0]": 0.464,
+      "(50.0, 100.0]": 0.727,
+      "(100.0, 300.0]": 0.958,
+      "(300.0, inf]": 0.995
+    }
+  },
+  "flip_index": {
+    "definition": "같은 물리 조건에서 기본 설정일 때의 승자와 반대 엔진이 이기는 비율 (둘 다 승부가 난 경우만)",
+    "tie_band_pctpt": 0.05,
+    "value": 0.519,
+    "n_decisive_pairs": 54,
+    "any_change_rate": 0.556,
+    "n_pairs": 180,
+    "winner_counts_by_dt": {
+      "0.0005": {
+        "MuJoCo": 10,
+        "PyBullet": 0,
+        "무승부": 26
+      },
+      "0.001": {
+        "MuJoCo": 12,
+        "PyBullet": 0,
+        "무승부": 24
+      },
+      "0.002": {
+        "MuJoCo": 4,
+        "PyBullet": 6,
+        "무승부": 26
+      },
+      "0.005": {
+        "MuJoCo": 0,
+        "PyBullet": 36,
+        "무승부": 0
+      },
+      "0.01": {
+        "MuJoCo": 12,
+        "PyBullet": 20,
+        "무승부": 4
+      }
+    }
+  }
+}

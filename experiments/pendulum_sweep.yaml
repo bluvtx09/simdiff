@@ -1,0 +1,21 @@
+# SimDiff 1단계: 진자 재현성 감사 설정
+scene: pendulum
+duration: 10.0            # s
+params:
+  mass: 1.0
+  length: 0.5
+  i_com: 0.002
+  gravity: 9.81
+dampings: [0.0, 0.05]     # 관절 감쇠 없음 / 있음 두 경우
+theta0_deg: [30, 90, 170] # 작은 진폭, 중간, 거의 뒤집힌 상태
+timesteps: [0.0005, 0.001, 0.002, 0.005, 0.01, 0.02]
+configs:
+  - {engine: mujoco,   label: "MuJoCo Euler (기본값)", integrator: Euler}
+  - {engine: mujoco,   label: "MuJoCo RK4",            integrator: RK4}
+  - {engine: mujoco,   label: "MuJoCo implicit",       integrator: implicit}
+  - {engine: mujoco,   label: "MuJoCo implicitfast",   integrator: implicitfast}
+  - {engine: pybullet, label: "PyBullet clean",        mode: clean}
+  - {engine: pybullet, label: "PyBullet 관성만 수정",   mode: file_inertia_only}
+  - {engine: pybullet, label: "PyBullet 감쇠만 수정",   mode: damping_only}
+  - {engine: pybullet, label: "PyBullet 기본값",        mode: default}
+repeat_for_determinism: 2

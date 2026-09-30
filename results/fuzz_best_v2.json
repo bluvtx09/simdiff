@@ -1,0 +1,75 @@
+{
+  "mujoco": {
+    "value_pct": 7.6645160112342126,
+    "found_by": "cmaes",
+    "seed": 5,
+    "params": {
+      "log10_dt": -2.0337245174190963,
+      "mu": 0.5223418692697421,
+      "v0": 2.6762805404903656,
+      "mj_log10_timeconst": -2.227161352007527,
+      "mj_impratio": 7.259509850588683,
+      "mj_cone": 0.9805679646181757
+    },
+    "dt": 0.0017409509497344426,
+    "steps_to_stop": 300.0,
+    "d_true": 0.6988909723083765,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.33100107427531666,
+      "share_over_1pct": 0.0
+    },
+    "share_over_1pct_cmaes": 0.056875,
+    "share_over_1pct_random": 0.0025
+  },
+  "pybullet": {
+    "value_pct": 0.8988048322844833,
+    "found_by": "random",
+    "seed": 0,
+    "params": {
+      "log10_dt": -2.0025123062470853,
+      "mu": 0.13938485236409157,
+      "v0": 2.268110092359513,
+      "pb_log10_iterations": 1.8063197177651302,
+      "pb_contact_erp": 0.6
+    },
+    "dt": 0.005,
+    "steps_to_stop": 331.7489369781261,
+    "d_true": 1.8811077802240699,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.17194171663524882,
+      "share_over_1pct": 0.0
+    },
+    "share_over_1pct_cmaes": 0.0,
+    "share_over_1pct_random": 0.0
+  },
+  "disagree": {
+    "value_pct": 8.793669033781969,
+    "found_by": "random",
+    "seed": 0,
+    "params": {
+      "log10_dt": -2.59328751109495,
+      "mu": 0.5675362118938841,
+      "v0": 2.5396338853038305,
+      "mj_log10_timeconst": -2.297261499829852,
+      "mj_impratio": 8.716638489288124,
+      "mj_cone": 0.033585575305464355,
+      "pb_log10_iterations": 1.4593108928598881,
+      "pb_contact_erp": 0.18174171545191925
+    },
+    "dt": 0.0015205029737484965,
+    "steps_to_stop": 300.0,
+    "d_true": 0.5792281312255384,
+    "robustness": {
+      "neighbors": 40,
+      "scale": 0.02,
+      "median": 0.027927449803712923,
+      "share_over_1pct": 0.05
+    },
+    "share_over_1pct_cmaes": 0.33145833333333335,
+    "share_over_1pct_random": 0.012083333333333333
+  }
+}
